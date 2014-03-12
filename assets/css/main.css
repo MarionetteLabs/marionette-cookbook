@@ -1,0 +1,67 @@
+body {
+  width: 600px;
+  margin: 40px auto;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.4rem;
+}
+
+html,
+body {
+  cursor: default;
+}
+ 
+code {
+  cursor: text;
+}
+ 
+a,
+label,
+button, 
+input[type="radio"], 
+input[type="submit"], 
+input[type="checkbox"] {
+  cursor: pointer;
+}
+ 
+button[disabled], 
+input[disabled] {
+  cursor: default;
+}
+
+h1 {
+  margin: 30px 0 10px;
+  font-size: 1.8rem;
+}
+
+h2 {
+  margin: 30px 0 10px;
+  font-size: 1.6rem;
+}
+
+h3 {
+  margin: 30px 0 10px;
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+ul.list {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+code {
+  font-family: Consolas, monospace;
+  font-size: 12px;
+  background: #eee;
+  border: 1px solid #dedede;
+  border-radius: 3px;
+  padding: 2px 4px;
+}

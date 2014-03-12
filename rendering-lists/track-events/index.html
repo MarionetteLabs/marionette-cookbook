@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <title>Marionette Examples: Rendering Lists</title>
+</head>
+<body>
+
+  <main>
+
+    <h1>Simple Lists</h1>
+    <p>
+      These collection of lists are collectively called the simple lists. What makes them simple is that they're
+      being rendered by an Item View, and not a Collection or Composite View. It might seem strange to render a list
+      with an Item View, but there <em>are</em> times when you don't need the added functionality that those views give you.
+    </p>
+
+    <h2>When To Use</h2>
+    <p>
+      You should use Item Views to render your lists when you don't need to track events, like hovers
+      or clicks, on individual items in the list. If you do want to do that then you should look at the
+      other examples.
+    </p>
+
+    <h2>Example</h2>
+    <ul class='list'></ul>
+
+  </main>
+  
+  <!-- Install our three dependencies -->
+  <script src='../../bower_components/jquery/dist/jquery.js'></script>
+  <script src='../../bower_components/underscore/underscore.js'></script>
+  <script src='../../bower_components/backbone/backbone.js'></script>
+
+  <!-- Don't forget Marionette! -->
+  <script src='../../bower_components/marionette/lib/backbone.marionette.js'></script>
+
+  <script type='text/template' id='template-color-list'>
+    <% _.each(items, function(item){ %>
+    <li> <%= item.colorName %> </li>
+    <% }); %>
+  </script>
+
+  <!-- Our script; this is where everything happens -->
+  <script src='script.js'></script>
+
+</body>
+</html>

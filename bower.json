@@ -1,0 +1,25 @@
+{
+  "name": "marionette.examples",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jmeas/marionette.examples",
+  "authors": [
+    "Jmeas <jellyes2@gmail.com>"
+  ],
+  "description": "Examples of common patterns with Marionette.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.0",
+    "marionette": "~1.6.4",
+    "html5-reset": "~2.1.2"
+  },
+  "resolutions": {
+    "jquery": "~2.1.0"
+  }
+}

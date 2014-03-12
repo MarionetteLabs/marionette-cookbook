@@ -1,0 +1,19 @@
+{
+  "name": "marionette.examples",
+  "version": "0.1.0",
+  "description": "Examples of common patterns with Marionette.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jmeas/marionette.examples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmeas/marionette.examples/issues"
+  },
+  "homepage": "https://github.com/jmeas/marionette.examples"
+}
