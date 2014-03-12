@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <title>Marionette Examples: Rendering Lists</title>
+  <!-- A CSS normalizer -->
+  <link rel='stylesheet' href='../bower_components/html5-reset/assets/css/reset.css'>
+  <!-- Some more style -->
+  <link rel='stylesheet' href='../assets/css/main.css'>
+  <link rel='stylesheet' href='tabs.css'>
+</head>
+<body>
+
+  <main>
+
+    <h1>Tabs</h1>
+    <p>
+      A common UI element is tabs. This example shows how to build tabs with Marionette.
+    </p>
+
+    <h2>When To Use</h2>
+    <p>
+      Use a Collection View when you need to render the list within a single element, like a <code>ul</code>.
+      If you have a more complex DOM structure around your list, like a wrapping <code>table</code>, then use a Composite View.
+    </p>
+    <p>
+      The reason for this distinction is that Composite Views can have a template associated with them. Within the
+      template you can specify where to render the list. Collection Views only have an <code>el</code>, and the default
+      render function will simply render the list within that element.
+    </p>
+
+    <h2>Example</h2>
+    <p>
+      The following mark up is rendered by the code found in <code>simple-list.js</code>:
+    </p>
+    <div class='tabs'></div>
+    
+  </main>
+  
+  <!-- Install our three dependencies -->
+  <script src='../bower_components/jquery/dist/jquery.js'></script>
+  <script src='../bower_components/underscore/underscore.js'></script>
+  <script src='../bower_components/backbone/backbone.js'></script>
+
+  <!-- Don't forget Marionette! -->
+  <script src='../bower_components/marionette/lib/backbone.marionette.js'></script>
+
+  <script type='text/template' id='template-tab-content'>
+  Hello from: <%= username %>
+  </script>
+
+  <script type='text/template' id='template-color-item'>
+    <%= username %>
+  </script>
+
+  <!-- The layout template -->
+  <script id='layout-template' type='text/template'>
+    <nav></nav>
+    <div></div>
+  </script>
+
+  <!-- Our script; this is where everything happens -->
+  <script src='tabs.js'></script>
+
+</body>
+</html>

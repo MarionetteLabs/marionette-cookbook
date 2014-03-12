@@ -3,28 +3,41 @@
 <head>
   <meta charset='utf-8'>
   <title>Marionette Examples: Rendering Lists</title>
+  <!-- A CSS normalizer -->
+  <link rel='stylesheet' href='../../bower_components/html5-reset/assets/css/reset.css'>
+  <!-- Some more style -->
+  <link rel='stylesheet' href='../../assets/css/main.css'>
 </head>
 <body>
 
   <main>
 
-    <h1>Simple Lists</h1>
+    <h1>Track Events</h1>
     <p>
-      These collection of lists are collectively called the simple lists. What makes them simple is that they're
-      being rendered by an Item View, and not a Collection or Composite View. It might seem strange to render a list
-      with an Item View, but there <em>are</em> times when you don't need the added functionality that those views give you.
+      When you need to track events on items in your collection, like clicks or hover states, a
+      Collection View or Composite View is the class of choice.
     </p>
 
     <h2>When To Use</h2>
     <p>
-      You should use Item Views to render your lists when you don't need to track events, like hovers
-      or clicks, on individual items in the list. If you do want to do that then you should look at the
-      other examples.
+      Use a Collection View when you need to render the list within a single element, like a <code>ul</code>.
+      If you have a more complex DOM structure around your list, like a wrapping <code>table</code>, then use a Composite View.
+    </p>
+    <p>
+      The reason for this distinction is that Composite Views can have a template associated with them. Within the
+      template you can specify where to render the list. Collection Views only have an <code>el</code>, and the default
+      render function will simply render the list within that element.
     </p>
 
     <h2>Example</h2>
-    <ul class='list'></ul>
-
+    <p>
+      The following mark up is rendered by the code found in <code>simple-list.js</code>:
+    </p>
+    <div class='example-container'>
+      <ul class='collection-view'></ul>
+      <div class='composite-view'></div>
+    </div>
+    
   </main>
   
   <!-- Install our three dependencies -->
@@ -35,14 +48,39 @@
   <!-- Don't forget Marionette! -->
   <script src='../../bower_components/marionette/lib/backbone.marionette.js'></script>
 
-  <script type='text/template' id='template-color-list'>
-    <% _.each(items, function(item){ %>
-    <li> <%= item.colorName %> </li>
-    <% }); %>
+  <!-- Collection View template -->
+  <script type='text/template' id='template-color-item'>
+    <li>
+      <%= colorName %>
+    </li>
+  </script>
+
+  <!-- This is the template for our Composite View -->
+  <script type='text/template' id='template-composite-view'>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Hex</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </script>
+  <!-- And finally for the item view within the Composite View -->
+  <script type='text/template' id='template-composite-color'>
+    <td>
+      <%= colorName %>
+    </td>
+    <td>
+      <%= hex %>
+    </td>
   </script>
 
   <!-- Our script; this is where everything happens -->
-  <script src='script.js'></script>
+  <script src='composite-view.js'></script>
+  <script src='collection-view.js'></script>
 
 </body>
 </html>
