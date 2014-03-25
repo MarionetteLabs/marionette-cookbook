@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <title>Marionette Examples: Puppets</title>
+  <!-- A CSS normalizer -->
+  <link rel='stylesheet' href='../../bower_components/html5-reset/assets/css/reset.css'>
+  <!-- Some more style -->
+  <link rel='stylesheet' href='../../assets/css/main.css'>
+</head>
+<body>
+
+  <main>
+
+    <h1>Puppet Definition</h1>
+    <p>
+      A Puppet is just a name for a component. Decoupled applications are made up of these components, or Puppets. Puppets
+      have a number of useful properties that make them desirable building blocks of complex apps.
+    </p>
+
+    <ul>
+      <li>They exist indendently from an application</li>
+      <li>They're reusable</li>
+      <li>They can be customized through options</li>
+    </ul>
+
+    <div class='example'>
+      <div id='profile-one'></div>
+      <div id='profile-two'></div>
+    </div>
+
+  </main>
+  
+  <!-- Install our three dependencies -->
+  <script src='../../bower_components/jquery/dist/jquery.js'></script>
+  <script src='../../bower_components/underscore/underscore.js'></script>
+  <script src='../../bower_components/backbone/backbone.js'></script>
+  <script src='../../bower_components/marionette/lib/core/backbone.marionette.js'></script>
+  <script src='../../bower_components/backbone.wreqr/lib/backbone.wreqr.js'></script>
+  <script src='../../bower_components/backbone.wreqr-radio/build/backbone.wreqr-radio.js'></script>
+  <script src='../../bower_components/backbone.babysitter/lib/backbone.babysitter.js'></script>
+  <script src='../../bower_components/future-vars/future-vars.js'></script>
+  <script src='../../bower_components/as-promised.js/as-promised.js'></script>
+
+
+  <script type='text/template' id='template-color-list'>
+    <% _.each(items, function(item){ %>
+    <li><%= item.colorName %></li>
+    <% }); %>
+  </script>
+
+  <!-- Our script; this is where everything happens -->
+  <script src='js/app.js'></script>
+  <script src='js/app.controller.js'></script>
+  <script src='js/lib/puppets/profile/profile.puppet.js'></script>
+  <script src='js/app/profiles/profiles.js'></script>
+  <script src='js/app/profiles/profile/profile.js'></script>
+
+</body>
+</html>
