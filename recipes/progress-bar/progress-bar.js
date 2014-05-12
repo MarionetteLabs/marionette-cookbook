@@ -1,40 +1,34 @@
 
 
-var ProgressBar = Backbone.View.extend({
-  el: '#example',
-
-  settings: {
-    parent: "example",
-    showSpinner: false
-  },
+var ProgressBar = Marionette.ItemView.extend({
+  template: "#progress-bar-tpl",
+  className: "progress-bar",
 
   events: {
-    'click #b-0': 'start',
-    'click #b-40': 'percent',
-    'click #b-inc': 'inc',
+    'click #b-0': 'empty',
+    'click #b-50': 'mid',
     'click #b-100': 'done'
   },
 
-  initialize: function() {
-    _.extend(NProgress.settings, this.settings);
+  ui: {
+    'bar': '.bar'
   },
 
-  start: function() {
-    NProgress.start();
+  empty: function() {
+    this.ui.bar.removeClass('done mid');
   },
 
-  percent: function() {
-    NProgress.set(0.4);
-  },
-
-  inc: function() {
-    NProgress.inc();
+  mid: function() {
+    this.ui.bar.removeClass('done').addClass('mid');
   },
 
   done: function() {
-    NProgress.done();
+    this.ui.bar.removeClass('mid').addClass('done');
   }
 
 });
 
-var progressBar = new ProgressBar();
+
+var progressBar = new ProgressBar({model: new Backbone.Model});
+progressBar.render()
+$('#example').prepend(progressBar.$el);

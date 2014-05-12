@@ -1,0 +1,49 @@
+<html lang="en" class="nprogress-busy"><head>
+  <meta charset="utf-8">
+  <title>Marionette Examples: Rendering Lists</title>
+  <!-- A CSS normalizer -->
+  <link rel="stylesheet" href="../../bower_components/html5-reset/assets/css/reset.css">
+  <!-- Some more style -->
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="nprogress.css">
+</head>
+<body>
+
+  <main>
+
+    <h1>Progress Bar</h1>
+    <p>
+    </p>
+
+    <h2>When To Use</h2>
+    <p>
+    </p>
+
+    <h2>Example</h2>
+    <p>
+      The following mark up is rendered by the code found in <code>progress-bar.js</code>:
+    </p>
+
+    <div id="example" style="border:5px solid black; height: 500px;" class="nprogress-parent">
+      <div class="contents fade out">
+        <div class="controls" style="margin:100px;">
+            <button class="button play" id="b-0">Start</button>
+            <button class="button play" id="b-40">40%</button>
+            <button class="button play" id="b-inc">Increment</button>
+            <button class="button play" id="b-100">Done</button>
+        </div>
+    </div>
+
+  <div id="nprogress"><div class="bar" role="bar" style="transition: all 200ms ease; -webkit-transition: all 200ms ease; -webkit-transform: translate3d(-0.6000000000000005%, 0px, 0px);"><div class="peg"></div></div></div></div></main>
+
+  <!-- Install our three dependencies -->
+  <script src="../../../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../../../bower_components/underscore/underscore.js"></script>
+  <script src="../../../bower_components/backbone/backbone.js"></script>
+
+
+  <!-- Our script; this is where everything happens -->
+  <script src="nprogress.js"></script>
+  <script src="progress-bar.js"></script>
+
+</body></html>

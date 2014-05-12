@@ -14,7 +14,7 @@
 })(function() {
   var NProgress = {};
 
-  NProgress.version = '0.1.3';
+  NProgress.version = 'etsy-fork'
 
   var Settings = NProgress.settings = {
     minimum: 0.08,
