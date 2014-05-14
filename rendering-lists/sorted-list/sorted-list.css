@@ -1,0 +1,35 @@
+#main {
+    width: 100%;
+}
+
+#creator {
+    width: 50%;
+    fieldset {
+        legend {
+            padding-left: 0;
+            padding-bottom: 20px;
+            font-size: 24px;
+        }
+        .field {
+            overflow: auto;
+            #newtitle {
+                width: 80%;
+                float: right;
+            }
+        }
+    }
+}
+
+#collection {
+    width: 50%;
+}
+
+.task {
+    background-color: #eee;
+    border-radius: 4px;
+    margin-top: 10px;
+    padding: 10px;
+    .title {
+        font-weight: bold;
+    }
+}

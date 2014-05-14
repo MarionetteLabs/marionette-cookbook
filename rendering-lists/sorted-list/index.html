@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="https://raw.github.com/documentcloud/underscore/master/underscore-min.js"></script>
+  <script type="text/javascript" src="https://raw.github.com/documentcloud/backbone/master/backbone-min.js"></script>
+  <script type="text/javascript" src="https://raw.github.com/marionettejs/backbone.marionette/master/lib/backbone.marionette.min.js"></script>
+  <link rel="stylesheet" href="sorted-list.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <script type="text/javascript" src="sorted-list.js"></script>
+
+  <body>
+    <script type="text/template" id="creator-template">
+    </script>
+    <script type="text/template" id="item-view-template">
+      <div class="title"><%= title %></div>
+    </script>
+    <div id="main">
+      <div id="creator">
+          <fieldset>
+            <legend>Add a new item:</legend>
+            <div class="field">
+              <label for="title">Title</label>:
+              <input id="newtitle" type="text" name="title" value="" placeholder="Some Title"/>
+              <label for="order">Order</label>:
+              <input id="neworder" type="text" name="order" value="" placeholder="eg. 2"/>
+              <button id="createbutton">Add</button>
+            </div>
+          </fieldset>
+      </div>
+      <div id="collection"></div>
+    </div>
+  </body>
+</html>
