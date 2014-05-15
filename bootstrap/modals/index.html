@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <title>Marionette Examples: Rendering Lists</title>
+  <script src='../../bower_components/jquery/dist/jquery.js'></script>
+  <script src='../../bower_components/underscore/underscore.js'></script>
+  <script src='../../bower_components/backbone/backbone.js'></script>
+  <script src='../../bower_components/backbone.babysitter/lib/backbone.babysitter.js'></script>
+  <script src='../../bower_components/backbone.wreqr/lib/backbone.wreqr.js'></script>
+  <script src='../../bower_components/marionette/lib/core/backbone.marionette.js'></script>
+  <link rel='stylesheet' href='../../bower_components/bootstrap/dist/css/bootstrap.css'>
+  <script src='../../bower_components/bootstrap/dist/js/bootstrap.js'></script>
+</head>
+<body>
+
+  <div id="application"></div>
+  <script src='application/application.js'></script>
+  <script src='application/layout.js'></script>
+  <script type="text/template" id="application-layout-template">
+    <div class="application__content"></div>
+    <div class="application__overlay"></div>
+  </script>
+
+  <script src='modal/channel.js'></script>
+  <script src='modal/controller.js'></script>
+  <script src='modal/view.js'></script>
+  <script src='modal/behavior.js'></script>
+  <script type="text/template" id="modal-template">
+    <div class="modal-dialog">
+      <div class="modal-content"></div>
+    </div>
+  </script>
+
+  <script src='example/controller.js'></script>
+  <script src='example/view.js'></script>
+  <script src='example/modal-view.js'></script>
+  <script type="text/template" id="example-template">
+    <div class="container">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="page-header text-center">
+          <h1>Bootstrap Modal Example</h1>
+        </div>
+        <button class="btn btn-primary btn-lg btn-block">Open Modal</button>
+      </div>
+    </div>
+  </script>
+  <script type="text/template" id="example-modal-template">
+    <div class="modal-header">
+      <button type="button" class="close" aria-hidden="true">&times;</button>
+      <h4 class="modal-title">Confirm Action</h4>
+    </div>
+
+    <div class="modal-body">
+      <p>Are you sure you want to do this?</p>
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default">Cancel</button>
+      <button type="button" class="btn btn-primary">Affirmative</button>
+    </div>
+  </script>
+
+  <!-- Start up -->
+  <script type="text/javascript">
+    $(function () {
+      Application.start();
+    });
+  </script>
+</body>
+</html>
