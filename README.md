@@ -1,4 +1,4 @@
-marionette.examples
+marionette.Recipes
 ===================
 
 Examples of common patterns with Marionette.js
