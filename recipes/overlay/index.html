@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <title>Marionette Examples: Rendering Lists</title>
+
+  <!-- Install our three dependencies -->
+  <script src='../../bower_components/jquery/dist/jquery.js'></script>
+  <script src='../../bower_components/underscore/underscore.js'></script>
+  <script src='../../bower_components/backbone/backbone.js'></script>
+
+  <!-- Don't forget Marionette! -->
+  <script src='../../bower_components/marionette/lib/backbone.marionette.js'></script>
+
+  <!-- Our script; this is where everything happens -->
+
+  <link rel='stylesheet' href='../../bower_components/bootstrap/dist/css/bootstrap.css'>
+
+  <style>
+    #mask {
+      background-color: rgba(245, 245, 241, 0.9);
+      height: 100%;
+      overflow-x: hidden;
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 100%;
+      z-index: 90;
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <h1>Overlay</h1>
+    <div id="overlay-example"></div>
+
+
+  </main>
+
+  <script type="text/html" id="app-layout-tpl">
+    <button type="button" class="btn btn-primary overlay-button">Wheeee</button>
+    <div id="mask" style="display:none;">
+      <div class="overlay-region">
+      </div>
+    </div>
+  </script>
+
+  <script type="text/html" id="overlay-tpl">
+      <div class="modal" style="display:block;">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+              <p>One fine body&hellip;</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </script>
+
+  <script src='overlay.js'></script>
+
+
+</body>
+</html>
