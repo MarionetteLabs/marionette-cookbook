@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <title>Marionette Examples: Rendering Lists</title>
+
+  <!-- Install our three dependencies -->
+  <script src='../../bower_components/jquery/dist/jquery.js'></script>
+  <script src='../../bower_components/underscore/underscore.js'></script>
+  <script src='../../bower_components/backbone/backbone.js'></script>
+
+  <!-- Don't forget Marionette! -->
+  <script src='../../bower_components/marionette/lib/backbone.marionette.js'></script>
+
+  <!-- Our script; this is where everything happens -->
+
+  <link rel='stylesheet' href='../../bower_components/bootstrap/dist/css/bootstrap.css'>
+
+</head>
+<body>
+
+  <main>
+    <h1>Dropdown Button</h1>
+    <div id="dropdown-example"></div>
+  </main>
+
+  <script type="text/html" id="dropdown-tpl">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Primary <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu">
+      <li><a href="#">Action</a></li>
+      <li><a href="#">Another action</a></li>
+      <li><a href="#">Something else here</a></li>
+      <li class="divider"></li>
+      <li><a href="#">Separated link</a></li>
+    </ul>
+    <div class="mask"></div>
+  </script>
+
+  <script src='dropdown.js'></script>
+
+
+</body>
+</html>
