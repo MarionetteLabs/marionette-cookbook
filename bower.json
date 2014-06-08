@@ -20,7 +20,6 @@
     "html5-reset": "~2.1.2"
   },
   "resolutions": {
-    "jquery": "~2.1.0",
     "backbone.wreqr": "~1.1.0"
   },
   "dependencies": {
