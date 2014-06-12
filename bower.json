@@ -19,12 +19,8 @@
     "marionette": "~1.8.5",
     "html5-reset": "~2.1.2"
   },
-  "resolutions": {
-    "backbone.wreqr": "~1.1.0"
-  },
   "dependencies": {
     "future-vars": "~0.2.1",
-    "backbone.wreqr-radio": "~1.2.0",
     "bootstrap": "~3.1.1"
   }
 }

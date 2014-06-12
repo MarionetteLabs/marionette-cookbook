@@ -8,7 +8,7 @@ Examples of common patterns with Marionette.js
 
 #### Getting Started
 + `git clone git@github.com:Puppets/marionette-recipes.git`
-+ ` cd marioonette-recipes`
++ ` cd marionette-recipes`
 + `bower install`
 + `python -m SimpleHTTPServer 3000`
 + open `localhost:3000`
