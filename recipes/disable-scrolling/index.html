@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <title>Marionette Examples: Rendering Lists</title>
+
+  <!-- Install our three dependencies -->
+  <script src='../../bower_components/jquery/dist/jquery.js'></script>
+  <script src='../../bower_components/underscore/underscore.js'></script>
+  <script src='../../bower_components/backbone/backbone.js'></script>
+
+  <!-- Don't forget Marionette! -->
+  <script src='../../bower_components/marionette/lib/backbone.marionette.js'></script>
+
+  <!-- Our script; this is where everything happens -->
+
+  <link rel='stylesheet' href='../../bower_components/bootstrap/dist/css/bootstrap.css'>
+
+  <style>
+    .shape {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      float:left;
+    }
+
+    .square {
+    }
+
+    .green {
+      background: green;
+    }
+
+    .red {
+      background: red;
+    }
+
+    .yellow {
+      background: yellow;
+    }
+
+    .blue {
+      background: blue;
+    }
+
+  </style>
+</head>
+<body>
+
+  <script type="text/html" id="layout-tpl">
+    <h1>Disable Scrolling</h1>
+    <div id="list">
+      <% shapes.each(function(shape) { %>
+        <div class="shape <%= shape.get('color') %> <%= shape.get('type') %>"></div>
+      <% }); %>
+    </div>
+  </script>
+
+  <main>
+    <div id="disable-scrolling-example">
+    </div>
+  </main>
+
+  <script src='disable-scrolling.js'></script>
+
+</body>
+</html>
