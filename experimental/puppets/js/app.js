@@ -15,7 +15,7 @@
 
   // Attach our global messaging protocols,
   // though you shouldn't access them from app
-  var globalCh = Backbone.radio.channel( 'global' );
+  var globalCh = Wreqr.radio.channel( 'global' );
   app.vent = globalCh.vent;
   app.reqres = globalCh.reqres;
   app.commands = globalCh.commands;
