@@ -1,3 +1,14 @@
+ /* Backbone.Advice
+  *
+  * This is a standard way to use a functional mixin approach.
+  * The Dropdown function wires up the utilities that the Dropdown view will
+  * receive. In this case, those are events and `onDropdownShow`.
+  *
+  */
+
+
+
+
 Backbone.Advice.addMixin(Marionette.ItemView);
 
 var Dropdown = function(options) {
