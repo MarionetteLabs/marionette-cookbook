@@ -1,6 +1,4 @@
-define(function(require) {
-    var CatView = require("views/cat_view");
-
+define(["views/cat_view"], function(CatView) {
     var catView = new CatView({
       el: "body"
     });
