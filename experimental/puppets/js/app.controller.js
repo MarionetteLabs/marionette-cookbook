@@ -20,7 +20,7 @@ app.addInitializer(function(){
   });
 
   // Command the app to render the second profile
-  globalCh.commands.setHandler( 'render:profileOne', function(profileView) {
+  globalCh.commands.setHandler( 'render:profileTwo', function(profileView) {
     app.getRegion( 'profileTwoRegion' ).show( profileView );
   });
 
