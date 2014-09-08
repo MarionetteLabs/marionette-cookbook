@@ -31,23 +31,33 @@
     tagName: 'ul',
     itemView: ColorView,
     collection: userCollection,
-    
+
   });
 
-  var TabLayout = Marionette.Layout.extend({
+  window.TabLayout = Marionette.Layout.extend({
     regions: {
       menu: 'nav',
       body: 'div'
-    }
+    },
+
+    events: {
+      'click li': function() {setTimeout(this.foo.bind(this), 10)}
+    },
+
+    foo: function() {bar()}
+
   });
 
-  var tabLayout = new TabLayout({
-    el: '.tabs',
-    template: "#layout-template",
-  });
+  setup = function() {
+    window.tabLayout = new TabLayout({
+      el: '.tabs',
+      template: "#layout-template",
+    });
 
-  tabLayout.render();
-  tabLayout.menu.show( collectionView );
-  tabLayout.body.show( new ContentView({model:userCollection.models[0]}) );
+    tabLayout.render();
+    tabLayout.menu.show( collectionView );
+    tabLayout.body.show( new ContentView({model:userCollection.models[0]}) );
+  }
+
 
 })();

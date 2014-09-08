@@ -13,7 +13,7 @@
 
   // Instantiate a new item view, giving it an element,
   // a template, and our collection
-  var listView = new Marionette.ItemView({
+  window.listView = new Marionette.ItemView({
     el: 'ul.list',
     template: '#template-color-list',
     collection: collection
