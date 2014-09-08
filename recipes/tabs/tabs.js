@@ -16,18 +16,19 @@
   /*
    * Configure the tabs
    */
-  var ColorView = Marionette.ItemView.extend({
+  ColorView = Marionette.ItemView.extend({
     template: '#template-color-item',
     tagName: 'li',
     events: {
       'click': 'updateBody'
     },
+
     updateBody: function() {
       tabLayout.body.show( new ContentView({model:this.model}) );
     }
   });
 
-  var collectionView = new Marionette.CollectionView({
+  collectionView = new Marionette.CollectionView({
     tagName: 'ul',
     itemView: ColorView,
     collection: userCollection,
@@ -40,11 +41,7 @@
       body: 'div'
     },
 
-    events: {
-      'click li': function() {setTimeout(this.foo.bind(this), 10)}
-    },
 
-    foo: function() {bar()}
 
   });
 
@@ -58,6 +55,8 @@
     tabLayout.menu.show( collectionView );
     tabLayout.body.show( new ContentView({model:userCollection.models[0]}) );
   }
+
+  setup()
 
 
 })();
