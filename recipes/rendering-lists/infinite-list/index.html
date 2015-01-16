@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="infinite-list.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
+  <body>
+  <!-- Templates -->
+  <script type="text/template" id="sliding-composite-view-template">
+    <div id='composite'>
+        <div class="list">
+            <div id="composite-items"></div>
+        </div>
+    </div>
+  </script>
+  <script type="text/template" id="sliding-item-template">
+    ItemView
+  </script>
+
+  <!-- Container -->
+  <div id="main">
+
+  </div>
+  <!-- Install our three dependencies -->
+  <script src='../../../bower_components/jquery/dist/jquery.js'></script>
+  <script src='../../../bower_components/underscore/underscore.js'></script>
+  <script src='../../../bower_components/backbone/backbone.js'></script>
+
+  <!-- Don't forget Marionette! -->
+  <script src='../../../bower_components/marionette/lib/backbone.marionette.js'></script>
+  <script type="text/javascript" src="infinite-list.js"></script>
+
+
+  </body>
+</html>
