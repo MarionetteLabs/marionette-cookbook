@@ -60,19 +60,24 @@
 
     var bind = function(events, context, namespace) {
         _.each(events, function(method, trigger) {
-            if (_.isFunction(context[method])) {
-                var parts = trigger.split(/\s*\+\s*/),
-                    key = _.last(parts),
-                    modifiers = _.initial(parts),
-                    callback = _.bind(context[method], context);
+            var parts = trigger.split(/\s*\+\s*/),
+                key = _.last(parts),
+                modifiers = _.initial(parts),
+                callback = null;
 
-                    if (eventsNamespace[namespace]) {
-                      eventsNamespace[namespace].push(buildHandler(key, modifiers, callback));
-                    } else {
-                      eventsNamespace[namespace] = [buildHandler(key, modifiers, callback)];
-                    }
+            if (_.isFunction(context[method])) {
+                callback = _.bind(context[method], context);
+            } else if (_.isFunction(method)) {
+                callback = _.bind(method, context);
+            }
+
+            if (eventsNamespace[namespace]) {
+                eventsNamespace[namespace].push(buildHandler(key, modifiers, callback));
+            } else {
+                eventsNamespace[namespace] = [buildHandler(key, modifiers, callback)];
             }
         });
+
         return context;
     };
 
